@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	(function(){ 
+	  return typeof arguments; 
+	})();
+	
+	
+
+
+	(function(x){ 
+	  delete x; 
+	  return x; 
+	})(1);
+	
+	
+
+	
+	(function f(f){
+	    return typeof f();
+	  })(function(){ return 1; });
+	
+	
+
+	
+
+	var f = (function f(){ return "1"; }, function g(){ return 2; })();
+  	typeof f;
+  	
+
+	 
+
+	var x = [typeof x, typeof y][1];
+  	typeof typeof x;
+  	
+
+	
+	(function f(){
+	    function f(){ return 1; }
+	    return f();
+	    function f(){ return 2; }
+	  })();
+	 
+
+	function f(){ return f; }
+	  new f() instanceof f;
+	  
+	
+
+	100['toString']['length']
+	
+
+
+	var x = 10;
+	var foo = {
+	    x: 20,
+	    bar: function () {
+	        var x = 30;
+	        return this.x;
+	    }
+	};
+	console.log(
+	    foo.bar(),    
+	    (foo.bar)(),     
+	    (foo.bar = foo.bar)(), 		
+	    (foo.bar, foo.bar)()  
+	);
+
+
+	</script>
+	
+</body>
+</html>
